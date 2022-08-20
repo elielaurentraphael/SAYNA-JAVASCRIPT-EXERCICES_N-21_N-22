@@ -31,3 +31,14 @@ Code HTML :
   </body>
 
 */
+
+const input = document.querySelector("input[type = submit]");
+const nam = document.querySelector("#name");
+const password = document.querySelector("#password");
+console.log(input);
+const submit = input;
+submit.addEventListener("click", () => {
+  console.log("formulaire soumis");
+  console.log(password.value);
+  console.log(nam.value);
+});

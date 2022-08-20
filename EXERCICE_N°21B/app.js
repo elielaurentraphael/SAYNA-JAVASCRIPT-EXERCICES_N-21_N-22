@@ -58,3 +58,29 @@ Code HTML :
 </html>
 
 */
+const btn = document.querySelector(".btn");
+console.log(btn);
+btn.addEventListener("click", (e) => {
+  console.log(e.type);
+  console.log(e.currentTarget);
+  console.log(e);
+  console.log(e.preventDefault);
+});
+
+const h1 = document.querySelector("h1");
+console.log(h1);
+h1.addEventListener("click", (e) => {
+  console.log(e.type);
+  console.log(e.currentTarget);
+  console.log(e);
+  console.log(e.preventDefault);
+});
+
+const link = document.querySelector("#link");
+console.log(link);
+link.addEventListener("click", (e) => {
+  console.log(e.type);
+  console.log(e.currentTarget);
+  console.log(e);
+  console.log(e.preventDefault);
+});

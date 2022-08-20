@@ -44,5 +44,53 @@ d.	À l'entrée de la souris, écrivez une fonction pour ajouter une classe blue
 e.	En quittant la souris, écrivez une fonction pour supprimer la classe blue de la balise h2.
 f.	Notez la création de la classe dans le fichier css pour que vous puissiez voir le résultat.
 
+click - fires after full action occurs
+mousedown - button is pressed
+mouseup - button is released
+mouseenter - moved onto an element
+mouseleave - moved out of an element
 
 */
+
+// 1-
+const btn = document.querySelector(".btn");
+//const btn = document.getElementsByClassName("btn"); s'utilise avec btn[0]
+// console.log(btn);
+const h2 = document.querySelector("h2");
+// console.log(h2);
+btn.addEventListener("click", () => {
+  h2.classList.toggle("blue");
+});
+
+// 2-
+function changeColor() {
+  h2.classList.toggle("color");
+}
+btn.addEventListener("click", () => {
+  changeColor();
+});
+
+// 3a-
+btn.addEventListener("click", () => {
+  console.log("you clicked me");
+});
+
+// 3b-
+btn.addEventListener("mousedown", () => {
+  console.log("down");
+});
+
+// 3c-
+btn.addEventListener("mouseup", () => {
+  console.log("up");
+});
+
+// 3d-
+h2.addEventListener("mouseenter", () => {
+  h2.classList.add("green");
+});
+
+// 3c-
+h2.addEventListener("mouseleave", () => {
+  h2.classList.remove("green");
+});
